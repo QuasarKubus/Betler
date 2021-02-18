@@ -56,11 +56,11 @@ def getUpdates():
     return newFiles
 
 def scrapeImages():
-    scrapedImages = []
     counter = 0
     outOf = 0
     outOf = len(getUpdates())
     for fileName in getUpdates():
+        FileHandling.appendListToFile([fileName, ""], "../Data/savedCSVs.txt")
         counter += 1
         percent = "{}%".format(math.ceil(100*counter/outOf))
         print(percent, "Processing: ", fileName)
@@ -101,4 +101,3 @@ def scrapeImages():
         writer = csv.writer(open("../Data/CSVs/{}-{}-{}-{}.csv".format(league, dataDict["Date"].replace("/","_"), dataDict["NameTeam1"].replace(" ", ""), dataDict["NameTeam2"].replace(" ", "")), "w"))
         for key, val in dataDict.items():
             writer.writerow([key, val])
-    FileHandling.appendListToFile(scrapedImages, "../Data/savedCSVs.txt")
