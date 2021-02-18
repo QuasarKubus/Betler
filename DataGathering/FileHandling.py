@@ -16,6 +16,16 @@ def writeListToFile(listToWrite: [str], path: str):
             raise Exception()
         f.close()
 
+def appendListToFile(listToWrite: [str], path: str):
+    content = "\n".join(listToWrite)
+    with open(path, "a") as f:
+        if f.writable:
+            f.write(content)
+        else:
+            print("Couldn't Write File", path)
+            raise Exception()
+        f.close()
+
 def getAllFileNamesIn(path: str) -> [str]:
     fileNames = []
     for root, dirs, files in os.walk(path):

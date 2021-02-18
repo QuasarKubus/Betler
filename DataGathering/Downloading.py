@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import os
 
 def removeProtocolAndServer(url: str) -> str:
+    url = url.replace(":443","")
     url = url.replace("http://live.volleyball-bundesliga.de/", "")
     url = url.replace("https://www.volleyball-bundesliga.de/", "")
     url = url.replace("http://www.volleyball-bundesliga.de/", "")
@@ -35,4 +36,4 @@ def saveToFile(URLs: [str], delay: float = 1):
         with open("../Data/Pdfs/"+URL, "wb") as file:
             file.write(response.content)
         time.sleep(delay)
-    FileHandling.writeListToFile(savedURLs, "../Data/savedURLs.txt")
+    FileHandling.appendListToFile(savedURLs, "../Data/savedURLs.txt")
