@@ -68,8 +68,6 @@ def scrapeImages():
         coordinates = []
         dataVolleyVersion = getVersion(image)
 
-        os.remove(fileName)
-
         # select correct bounding boxes
         if dataVolleyVersion == "Data Volley 4":
             coordinates = coordinates_4
