@@ -7,6 +7,8 @@ def readFileToList(path: str) -> [str]:
         return lineList
 
 def writeListToFile(listToWrite: [str], path: str):
+    if len(listToWrite) == 0:
+        return
     content = "\n".join(listToWrite)
     with open(path, "w") as f:
         if f.writable:
@@ -17,6 +19,8 @@ def writeListToFile(listToWrite: [str], path: str):
         f.close()
 
 def appendListToFile(listToWrite: [str], path: str):
+    if len(listToWrite) == 0:
+        return
     content = "\n".join(listToWrite)
     with open(path, "a") as f:
         if f.writable:

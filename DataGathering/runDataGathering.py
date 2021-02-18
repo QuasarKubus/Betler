@@ -1,11 +1,14 @@
 import WebScraping
 import Downloading
 import PdfsToImage
+import ImageScraping
 
-statisticURLs = WebScraping.getLastNSeasonBundesLigaFileUrls(delay = 0.2, numberOfSeasons = 2)
+#statisticURLs = WebScraping.getLastNSeasonBundesLigaFileUrls(delay = 0.2, numberOfSeasons = 2)
 
-notSaved = Downloading.getNotSavedPDFs(statisticURLs)
+#notSaved = Downloading.getNotSavedPDFs(statisticURLs)
 
-Downloading.saveToFile(notSaved, delay = 0.2)
+#Downloading.saveToFile(notSaved, delay = 0.2)
 
-PdfsToImage.convertAndSave()
+#PdfsToImage.convertAndSave()
+
+ImageScraping.scrapeImages()

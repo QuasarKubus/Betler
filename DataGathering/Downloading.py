@@ -9,6 +9,7 @@ def removeProtocolAndServer(url: str) -> str:
     url = url.replace("http://live.volleyball-bundesliga.de/", "")
     url = url.replace("https://www.volleyball-bundesliga.de/", "")
     url = url.replace("http://www.volleyball-bundesliga.de/", "")
+    url = url.replace("https://www.volleyball-bundesliga.de:443/", "")
     return url
 
 def getNotSavedPDFs(newlyScrapedPDFURLs: [str]) -> [str]:
