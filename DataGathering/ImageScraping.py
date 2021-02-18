@@ -20,8 +20,8 @@ def loadImgCoordinates(path):
 # configuration for tesserect, works better than standard configuration
 customConfigTesseract = r'-l deu -c tessedit_char_whitelist="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZöüäÖÄÜß1234567890.+-/* " --psm 7'
 
-coordinates_07 = loadImgCoordinates("../Data/ImageCoordinatesDataVolley4.txt")
-coordinates_4 = loadImgCoordinates("../Data/ImageCoordinatesDataVolley07.txt")
+coordinates_07 = loadImgCoordinates("../Data/ImageCoordinatesDataVolley07.txt")
+coordinates_4 = loadImgCoordinates("../Data/ImageCoordinatesDataVolley4.txt")
 
 # bounding boxes of Data Volley signature
 # needed to identify which coordinates to use
@@ -36,8 +36,8 @@ def getVersion(image):
     readString_07 = pytesseract.image_to_string(cropped_part_07, config=customConfigTesseract).strip()
     readString_4 = pytesseract.image_to_string(cropped_part_4, config=customConfigTesseract).strip()
 
-    print(readString_07)
-    print(readString_4)
+    #print(readString_07)
+    #print(readString_4)
 
     if "07" in readString_07:
         return "Data Volley 07"
@@ -57,12 +57,12 @@ def getUpdates():
 def scrapeImages():
     scrapedImages = []
     for fileName in getUpdates():
-        scrapedImages.append(fileName)
         print("Processing: ", fileName)
         image = Image.open(fileName)
         coordinates = []
         dataVolleyVersion = getVersion(image)
 
+        os.remove(fileName)
 
         # select correct bounding boxes
         if dataVolleyVersion == "Data Volley 4":
@@ -77,6 +77,7 @@ def scrapeImages():
             continue
 
         dataDict = {}
+        
 
         for coordinate in coordinates:
 
@@ -91,7 +92,7 @@ def scrapeImages():
             league = league[0:3] + "M"
         else:
             league = league[0:3] + "F"
-        writer = csv.writer(open("../Data/CSVs/{}-{}-{}-{}.csv".format(league, dataDict["Date"].replace("/","_"), dataDict["NameTeam1"].replace(" ", ""), dataDict["NameTeam2"].replace(" ", "")), "w"))
+        writer = csv.writer(open("cleanData/{}-{}-{}-{}.csv".format(league, dataDict["Date"].replace("/","_"), dataDict["NameTeam1"].replace(" ", ""), dataDict["NameTeam2"].replace(" ", "")), "w"))
         for key, val in dataDict.items():
             writer.writerow([key, val])
     FileHandling.appendListToFile(scrapedImages, "../Data/savedCSVs.txt")
