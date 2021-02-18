@@ -4,6 +4,7 @@ import pytesseract
 from pytesseract import Output
 import csv
 import FileHandling
+import math
 
 def loadImgCoordinates(path):
     with open(path,"r") as file:
@@ -56,8 +57,13 @@ def getUpdates():
 
 def scrapeImages():
     scrapedImages = []
+    counter = 0
+    outOf = 0
+    outOf = len(getUpdates())
     for fileName in getUpdates():
-        print("Processing: ", fileName)
+        counter += 1
+        percent = "{}%".format(math.ceil(100*counter/outOf))
+        print(percent, "Processing: ", fileName)
         image = Image.open(fileName)
         coordinates = []
         dataVolleyVersion = getVersion(image)
@@ -92,7 +98,7 @@ def scrapeImages():
             league = league[0:3] + "M"
         else:
             league = league[0:3] + "F"
-        writer = csv.writer(open("cleanData/{}-{}-{}-{}.csv".format(league, dataDict["Date"].replace("/","_"), dataDict["NameTeam1"].replace(" ", ""), dataDict["NameTeam2"].replace(" ", "")), "w"))
+        writer = csv.writer(open("../Data/CSVs/{}-{}-{}-{}.csv".format(league, dataDict["Date"].replace("/","_"), dataDict["NameTeam1"].replace(" ", ""), dataDict["NameTeam2"].replace(" ", "")), "w"))
         for key, val in dataDict.items():
             writer.writerow([key, val])
     FileHandling.appendListToFile(scrapedImages, "../Data/savedCSVs.txt")
