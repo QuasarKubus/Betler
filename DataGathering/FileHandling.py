@@ -36,3 +36,20 @@ def getAllFileNamesIn(path: str) -> [str]:
         for file in files:
             fileNames.append(os.path.join(root, file))
     return fileNames
+
+def readGameCSV(path: str):
+    d = {}
+    with open(path, "r") as file:
+        content = file.read().strip()
+        items = content.split("\n")
+        for item in items:
+            item = item.split(",")
+            if len(item) == 2:
+                tmp = item[1]
+                try:
+                    tmp = float(item[1])
+                except:
+                    if len(item[1]) <= 3:
+                        tmp = ""
+            d[item[0]] = tmp
+    return d
