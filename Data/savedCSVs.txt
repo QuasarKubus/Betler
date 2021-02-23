@@ -414,3 +414,14 @@
 ../Data/Images/uploads_d6678f92-b2fc-4d66-ab41-8a5121f415a7.png
 ../Data/Images/uploads_3daa2178-ef42-49ee-a5b8-791ff52005b3.png
 ../Data/Images/uploads_1a1d5aed-388c-4ba8-859a-a6ae947ac2ca.png
+../Data/Images/2020-21_Men_1083.png
+../Data/Images/2020-21_Men_1084.png
+../Data/Images/uploads_6114e0b2-d982-45c7-abb8-7f154b5888ae.png
+../Data/Images/uploads_bb649c9a-8abf-441c-9d41-6a9a23135173.png
+../Data/Images/uploads_52489181-72b1-4052-8a88-c80f3f7400c5.png
+../Data/Images/uploads_6680fa1e-f37d-4a18-b2d2-49648264f433.png
+../Data/Images/uploads_9ffd6747-7243-4722-8901-0c3d00b080b0.png
+../Data/Images/uploads_11de826f-bf31-448b-81f9-55f55bfa00e1.png
+../Data/Images/uploads_4d24841e-45c7-4095-8ec0-9f717f78867a.png
+../Data/Images/uploads_b541dfed-6e60-4b5a-8ce8-af98d9a2a913.png
+../Data/Images/uploads_e7683bfe-5071-43c0-a021-0ed1b53d34ab.png
