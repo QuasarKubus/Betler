@@ -425,3 +425,6 @@
 ../Data/Images/uploads_4d24841e-45c7-4095-8ec0-9f717f78867a.png
 ../Data/Images/uploads_b541dfed-6e60-4b5a-8ce8-af98d9a2a913.png
 ../Data/Images/uploads_e7683bfe-5071-43c0-a021-0ed1b53d34ab.png
+../Data/Images/2020-21_Men_1077.png
+../Data/Images/uploads_753c7a83-6202-4220-9566-68ab517c9885.png
+../Data/Images/uploads_93a25c61-ceb7-410a-aa95-3e93e0bfed30.png

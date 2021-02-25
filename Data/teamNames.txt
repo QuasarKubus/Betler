@@ -1,22 +1,22 @@
-"VfB Friedrichshafen"
-"SWD powervolleys DÜREN"
-"BERLIN RECYCLING Volleys"
-"WWK Volleys Herrsching"
-"United Volleys Frankfurt"
-"SVG Lüneburg"
-"Netzhoppers KW-Bestensee"
-"Helios GRIZZLYS Giesen"
-"Volleyball Bisons Bühl"
-"VCO Berlin"
-"TSV Unterhaching"
-"Dresdner SC"
-"Allianz MTV Stuttgart"
-"SSC Palmberg Schwerin"
-"Rote Raben Vilsbiburg"
-"SC Potsdam"
-"VfB Suhl LOTTO Thüringen"
-"NawaRo Straubing"
-"VC Wiesbaden"
-"USC Münster"
-"Ladies in Black Aachen"
-"Schwarz-Weiß Erfurt"
+VfB Friedrichshafen
+SWD powervolleys DÜREN
+BERLIN RECYCLING Volleys
+WWK Volleys Herrsching
+United Volleys Frankfurt
+SVG Lüneburg
+Netzhoppers KW-Bestensee
+Helios GRIZZLYS Giesen
+Volleyball Bisons Bühl
+VCO Berlin
+TSV Unterhaching
+Dresdner SC
+Allianz MTV Stuttgart
+SSC Palmberg Schwerin
+Rote Raben Vilsbiburg
+SC Potsdam
+VfB Suhl LOTTO Thüringen
+NawaRo Straubing
+VC Wiesbaden
+USC Münster
+Ladies in Black Aachen
+Schwarz-Weiß Erfurt
